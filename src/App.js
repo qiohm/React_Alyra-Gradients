@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GradientsHeader from './components/GradientsHeader.js'
+//import GradientsList from './components/GradientsList.js'
+import Footer from './components/Footer.js'
+// import logo from './logo.svg'
+// import './App.css'
+import gradients from "./gradients"
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <GradientsHeader list={gradients} />
       </header>
-    </div>
-  );
+      <main>
+        <div className="container my-4">
+        <h1 className="text-center">React Alyra Gradients</h1>
+        { /*<GradientsList list={gradients} />*/}    
+        </div>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  )
 }
+
 
 export default App;
